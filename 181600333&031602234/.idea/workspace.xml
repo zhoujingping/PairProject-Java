@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0b956198-f867-413d-8365-ff044b7ec3e7" name="默认更改列表" comment="">
-      <change afterPath="$PROJECT_DIR$/cvpr/.idea/artifacts/untitled3_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/.idea/libraries/JAX_WS_Glassfish___JAX_WS_2_2_RI___Metro_1_X___JWSDP_2_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/FastInoset.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/gmbal-api-only.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/ha-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/javax.annotation.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/jaxb-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/jaxb-impl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/jaxb-xjc.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/jaxws-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/jaxws-rt.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/jaxws-tools.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/jsoup-1.7.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/jsr181-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/mail.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/management-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/mimepull.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/policy.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/saaj-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/saaj-impl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/stax-ex.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/stax2-api.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/streambuffer.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/lib/woodstox-core-asl.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/result.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/src/getword.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/untitled3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/web/WEB-INF/sun-jaxws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/web/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cvpr/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../181600333&amp;031602234/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../181600333&amp;031602234/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,15 +89,15 @@
     <session id="330010915">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.0" value="1" />
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.20" value="1" />
           <entry key="project.open.time.21" value="3" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.8" value="1" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="12" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -149,6 +117,7 @@
           <entry key="iml" value="1" />
           <entry key="java" value="7" />
           <entry key="txt" value="1" />
+          <entry key="xml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -156,6 +125,7 @@
           <entry key="IDEA_MODULE" value="1" />
           <entry key="JAVA" value="7" />
           <entry key="PLAIN_TEXT" value="1" />
+          <entry key="XML" value="6" />
         </counts>
       </usages-collector>
     </session>
@@ -165,7 +135,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lib.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="893">
               <caret line="142" column="33" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -185,10 +155,41 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cvpr/src/getword.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-312">
+            <state relative-caret-position="475">
+              <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -199,11 +200,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="133">
               <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1944#1960#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -294,6 +294,11 @@
             <path>
               <item name="rgzy" type="b2602c69:ProjectViewProjectNode" />
               <item name="rgzy" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="rgzy" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rgzy" type="462c0819:PsiDirectoryNode" />
               <item name="cvpr" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -306,8 +311,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -318,7 +323,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../181600333&amp;031602234" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="模块" />
@@ -352,7 +357,7 @@
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.siberia.demo.Main" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="181600333" />
       <extension name="coverage">
         <pattern>
@@ -385,7 +390,6 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.WordCount" />
       <item itemvalue="Application.Main" />
     </list>
@@ -435,16 +439,17 @@
       <workItem from="1538970842262" duration="2344000" />
       <workItem from="1538973347410" duration="3121000" />
       <workItem from="1539082368219" duration="7180000" />
+      <workItem from="1539091310483" duration="197000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103614000" />
+    <option name="totallyTimeSpent" value="103811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3336887" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.33742005" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="设计器" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -453,7 +458,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3383948" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.3383948" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -482,7 +487,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Main.java" />
     <entry file="file://$PROJECT_DIR$/src/com/siberia/demo/count.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_92/javafx-src.zip!/com/sun/media/jfxmedia/track/Track.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -525,13 +529,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/result.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="8" selection-start-line="12" selection-start-column="8" selection-end-line="12" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/result.txt" />
     <entry file="file://$PROJECT_DIR$/src/MapValueComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
@@ -546,20 +544,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1944#1960#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/cvpr/result.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/cvpr/src/example/HelloWorld.java" />
     <entry file="file://$PROJECT_DIR$/src/lib.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="893">
           <caret line="142" column="33" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -573,23 +564,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cvpr/result.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/181600333.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cvpr/src/example/HelloWorld.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cvpr/src/getword.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-312">
+        <state relative-caret-position="133">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cvpr/src/getword.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="17" lean-forward="true" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/181600333.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/modules.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
