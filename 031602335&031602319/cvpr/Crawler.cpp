@@ -197,18 +197,23 @@ void GetText()
 			char * title = new char[next - result + 1];
 			q=sscanf(result, "%[^<]", title);
 			result = strstr(result, a);
-			if (result)
-			{
-				result += strlen(a);
-				result++;
-				const char * next1 = strstr(result, "<");
-				char * abstract = new char[next1 - result + 1];
-				q=sscanf(result, "%[^<]", abstract);
-				outfile << i << endl;
-				outfile << "Title: " << title << endl;
-				outfile << "Abstract: " << abstract << endl;
-				delete[] abstract;
-			}
+				if (result)
+				{
+					result += strlen(a);
+					result++;
+					const char * next2 = strstr(result, "<");
+					char * abstract = new char[next2 - result + 1];
+					q = sscanf(result, "%[^<]", abstract);
+					outfile << i << endl;
+					outfile << "Title: " << title << endl;
+					outfile << "Abstract: " << abstract << endl;
+					if (i != n - 1)
+					{
+						outfile << endl;
+						outfile << endl;
+					}
+					delete[] abstract;
+				}
 			delete[] title;
 		}
 		free(response);
