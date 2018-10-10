@@ -1,3 +1,4 @@
+package workOutPlus;
 
 import java.io.*;
 import java.util.*;
@@ -20,11 +21,15 @@ public class Main {
 		Main m = new Main();
 
 		m.readFile(args);
+		Lib.Preprocess(m.getF());
+
 		if (m.getM() != 0 && m.getM() != 1) {
-			Lib.phraseCount(m.getF(), m.getW(), m.getM());
+			Lib.phraseCount(m.getW(), m.getM());
 		} else {
-			Lib.wordCount(m.getF(), m.getW());
+			Lib.wordCount(m.getW());
 		}
+
+		Lib.listSort();
 
 		m.characters = Lib.characters;
 		m.lines = Lib.lines;
