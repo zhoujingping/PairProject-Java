@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 public class lib implements wordCount{
 	@Override
 	public int linesCount(String filepath) throws IOException {
-		int linescount = -1;
+		int linescount = 0;
         try {
             FileReader fileReader = new FileReader(filepath);
             BufferedReader bufferedReader = new BufferedReader(fileReader);
@@ -17,7 +17,7 @@ public class lib implements wordCount{
             while ((line = bufferedReader.readLine()) != null) {
             	System.out.println(line);
                 if (line.matches("\\d+")) {
-                    linescount++;
+                    
                 } else if (line.length() != 0 && !line.matches("\\s+")) {
                     linescount++;
                 }
