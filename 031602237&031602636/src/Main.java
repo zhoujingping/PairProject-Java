@@ -26,24 +26,14 @@ public class Main {
 			System.exit(0);
 		}else {
 			wordCount count = new lib();
-<<<<<<< HEAD
 			int linescount = count.linesCount(parser.getI());
-=======
-		//	int linescount = count.linesCount(path);
->>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
 		//	int wordscount = count.wordsCount(path);
 			int charscount = count.charsCount(handleContent.getHandledContent());
 			writeInTxt.writeTxt("characters: " + charscount);
 		//	writeInTxt.writeTxt("words: " + wordscount);
-<<<<<<< HEAD
 			writeInTxt.writeTxt("lines: " + linescount);
 		//	count.wordDetail(parser.getI());
 			System.out.println(linescount);
-=======
-		//	writeInTxt.writeTxt("lines: " + linescount);
-		//	count.wordDetail(parser.getI());
-		//	System.out.println(linescount);
->>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
 			System.out.println(charscount);
 		}
 	}

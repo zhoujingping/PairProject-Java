@@ -1,11 +1,7 @@
 public class Parser {
 
 
-<<<<<<< HEAD
     private String i = "input.txt";
-=======
-    private String i = "test.txt";
->>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
     private String o = "result.txt";
     private int w = 0;
     private int m = 1;

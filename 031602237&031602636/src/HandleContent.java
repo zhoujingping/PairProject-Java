@@ -19,11 +19,7 @@ public class HandleContent {
             StringBuilder stringBuilder = new StringBuilder();
             String line;
             while ((line = bufferedReader.readLine()) != null) {
-<<<<<<< HEAD
   //              stringBuilder.append(line).append("\n");
-=======
- //               stringBuilder.append(line).append("\n");
->>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
                 if (line.startsWith("Title: ")) {
                     titles.add(line.substring(7));
                     stringBuilder.append(line.substring(7));
@@ -36,10 +32,7 @@ public class HandleContent {
             }
             String content = stringBuilder.toString();
             handledContent = content.replace("\r", "");
-<<<<<<< HEAD
             bufferedReader.close();
-=======
->>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("File do not exist.");
