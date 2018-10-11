@@ -92,22 +92,11 @@ public class Lib {
 
 	}
 
-	public static void listSort() {
 
-		list = new ArrayList<Map.Entry<String, Integer>>(hashMap.entrySet());
+	
 
-		// 排序
-
-		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-			public int compare(Map.Entry<String, Integer> e1, Map.Entry<String, Integer> e2) {
-				int re = e2.getValue() - e1.getValue();
-				return (re == 0) ? e1.getKey().compareTo(e2.getKey()) : re;
-
-			}
-
-		});
-	}
-
+	
+	//计算单词词频
 	public static void wordCount(int w) {
 
 		int incre = (w == 1 ? 10 : 1);
@@ -153,6 +142,7 @@ public class Lib {
 
 	}
 
+	//计算词组词频
 	public static void phraseCount(int w, int m) {
 
 		String[] wordArray = null;// 单词数组
@@ -163,6 +153,7 @@ public class Lib {
 		int tmp = 0;
 		int wALength = 0;
 
+		//处理Title
 		for (int p = 0; p < titleList.size(); p++) {
 
 			tmp = 0;
@@ -226,9 +217,15 @@ public class Lib {
 		// 处理Abstract
 		for (int p = 0; p < abstractList.size(); p++) {
 
+			tmp = 0;
 			count = 0;
 			wordArray = abstractList.get(p).split("\\s*[^a-zA-Z0-9]+");
 			sepArray = abstractList.get(p).split("[a-zA-Z0-9]+");
+
+			// 若以分隔符开头 合并时以第二个分隔符开始
+			if (abstractList.get(p).matches("\\s*[^a-zA-Z0-9]+[\\s\\S]*")) {
+				tmp = 1;
+			}
 
 			for (int i = 0; i < wordArray.length; i++) {
 
@@ -276,5 +273,20 @@ public class Lib {
 		}
 
 	}
+	
+	// 排序
+		public static void listSort() {
+
+			list = new ArrayList<Map.Entry<String, Integer>>(hashMap.entrySet());
+
+			Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+				public int compare(Map.Entry<String, Integer> e1, Map.Entry<String, Integer> e2) {
+					int re = e2.getValue() - e1.getValue();
+					return (re == 0) ? e1.getKey().compareTo(e2.getKey()) : re;
+
+				}
+
+			});
+		}
 
 }
