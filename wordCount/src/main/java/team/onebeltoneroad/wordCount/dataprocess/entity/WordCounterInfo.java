@@ -4,7 +4,7 @@ public class WordCounterInfo {
     private String inputFile = "input.txt";
     private String outputFile = "output.txt";
     private int weightFactor = 1;
-    private int wordGroupLength = -1;
+    private int phraseLength = -1;
     private int wordFrequencyOutNum = 10;
 
     public String getInputFile() {
@@ -31,12 +31,12 @@ public class WordCounterInfo {
         this.weightFactor = weightFactor;
     }
 
-    public int getWordGroupLength() {
-        return wordGroupLength;
+    public int getPhraseLength() {
+        return phraseLength;
     }
 
-    public void setWordGroupLength(int wordGroupLength) {
-        this.wordGroupLength = wordGroupLength;
+    public void setPhraseLength(int phraseLength) {
+        this.phraseLength = phraseLength;
     }
 
     public int getWordFrequencyOutNum() {

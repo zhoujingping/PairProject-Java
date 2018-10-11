@@ -9,7 +9,7 @@ public class CommandParser {
         options.addOption("i", "input", true, "input file path.");
         options.addOption("o", "output", true, "result file path.");
         options.addOption("w", "weight", true, "set weight factor.");
-        options.addOption("m", "length", true, "word group length.");
+        options.addOption("m", "length", true, "phrase length.");
         options.addOption("n", "number", true, "word frequency output number.");
         options.addOption("h", "help", false, "print options' information");
 
@@ -24,7 +24,7 @@ public class CommandParser {
                 wordCounterInfo.setOutputFile(commandLine.getOptionValue("o"));
                 wordCounterInfo.setWeightFactor(Integer.parseInt(commandLine.getOptionValue("w")));
                 if (commandLine.hasOption("m")) {
-                    wordCounterInfo.setWordGroupLength(Integer.parseInt(commandLine.getOptionValue("m")));
+                    wordCounterInfo.setPhraseLength(Integer.parseInt(commandLine.getOptionValue("m")));
                 }
                 if (commandLine.hasOption("n")) {
                     wordCounterInfo.setWordFrequencyOutNum(Integer.parseInt(commandLine.getOptionValue("n")));
