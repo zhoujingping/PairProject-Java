@@ -14,7 +14,7 @@ public class Main {
     	HandleContent handleContent = new HandleContent(parser.getI());
     	
 		File file = new File(parser.getI());
-		File file1 = new File(".\\result.txt");
+		File file1 = new File(parser.getO());
 		if (file1.exists() && file.isFile()) {
 			file1.delete();
 		}
@@ -29,9 +29,9 @@ public class Main {
 			int linescount = count.linesCount(parser.getI());
 		//	int wordscount = count.wordsCount(path);
 			int charscount = count.charsCount(handleContent.getHandledContent());
-			writeInTxt.writeTxt("characters: " + charscount);
+			writeInTxt.writeTxt("characters: " + charscount,parser.getO());
 		//	writeInTxt.writeTxt("words: " + wordscount);
-			writeInTxt.writeTxt("lines: " + linescount);
+			writeInTxt.writeTxt("lines: " + linescount,parser.getO());
 		//	count.wordDetail(parser.getI());
 			System.out.println(linescount);
 			System.out.println(charscount);

@@ -5,11 +5,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 public class writeInTxt {
-	public static void writeTxt(String str) {
+	public static void writeTxt(String str,String o) {
 		FileWriter fileWriter = null;
 		try {
 			//如果文件存在，则追加内容；如果文件不存在，则创建文件
-			File file = new File(".\\result.txt");
+			File file = new File(o);
 			file.createNewFile();
 			fileWriter = new FileWriter(file,true);
 		}catch (IOException e) {
