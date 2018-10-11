@@ -64,6 +64,7 @@ public class Main {
         /*输出结果*/
         try {
             lib.printFile(futureChar.get(), futureWord.get(),  futureLine.get(), map,outPathname,needNum);
+            executor.shutdown();
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
