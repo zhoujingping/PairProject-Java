@@ -1,5 +1,8 @@
-<<<<<<< HEAD
-characters: 60
-=======
-characters: 40
->>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
+characters: 122
+words: 15
+lines: 6
+<friday>: 3
+<monday>: 3
+<thursday>: 3
+<tuesday>: 3
+<wednesday>: 3

@@ -3,10 +3,18 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class lib implements wordCount{
+	private static final int HashMap = 0;
+	private static final int String = 0;
+	private static final int Integer = 0;
+
 	@Override
 	public int linesCount(String filepath) throws IOException {
 		int linescount = 0;
@@ -31,6 +39,7 @@ public class lib implements wordCount{
 
 	@Override
 	public int wordsCount(String filepath) throws IOException {
+		
 		return 0;
 	}
 

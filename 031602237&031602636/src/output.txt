@@ -1,0 +1,6 @@
+characters: 224
+words: 27
+lines: 6
+<monday tuesday wednesday>: 33
+<tuesday wednesday thursday>: 33
+<wednesday thursday friday>: 3
