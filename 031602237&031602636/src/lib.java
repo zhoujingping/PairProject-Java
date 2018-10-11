@@ -1,7 +1,10 @@
 
 
+<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.io.FileReader;
+=======
+>>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
 import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -9,6 +12,7 @@ import java.util.regex.Pattern;
 public class lib implements wordCount{
 	@Override
 	public int linesCount(String filepath) throws IOException {
+<<<<<<< HEAD
 		int linescount = -1;
         try {
             FileReader fileReader = new FileReader(filepath);
@@ -27,6 +31,9 @@ public class lib implements wordCount{
             e.printStackTrace();
         }
         return linescount;
+=======
+		return 0;
+>>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
 	}
 
 	@Override

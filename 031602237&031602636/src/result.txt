@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 characters: 60
+=======
+characters: 40
+>>>>>>> 88baa88c2a684785f65ed86f85c6378c40d29a23
