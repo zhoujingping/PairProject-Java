@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b660c30b-774c-4c43-b40d-1a63e9b920a1" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/result.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/datacrawl/Crawl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/datacrawl/Crawl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/dataprocess/service/WordCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/dataprocess/service/WordCounter.java" afterDir="false" />
-    </list>
+    <list default="true" id="b660c30b-774c-4c43-b40d-1a63e9b920a1" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,79 +11,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="PhraseFrequencyCounter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/dataprocess/service/PhraseFrequencyCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="282" column="25" selection-start-line="282" selection-start-column="25" selection-end-line="282" selection-end-column="25" />
-              <folding>
-                <element signature="e#1117#1131#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordCounter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/dataprocess/service/WordCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="138" column="34" selection-start-line="138" selection-start-column="34" selection-end-line="138" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CharCounter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/dataprocess/service/CharCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-338">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WordsFrequencyCounter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/dataprocess/service/WordsFrequencyCounter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3588">
-              <caret line="217" column="5" selection-start-line="217" selection-start-column="5" selection-end-line="217" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Crawl.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/datacrawl/Crawl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="548">
-              <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/result.txt">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="FilePrinter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/dataprocess/tool/FilePrinter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/team/onebeltoneroad/wordCount/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1196">
-              <caret line="59" column="3" selection-start-line="59" selection-start-column="3" selection-end-line="59" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -119,7 +43,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -222,7 +146,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../031602240&amp;031602334/wordCount" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -308,7 +232,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539348067972</updated>
-      <workItem from="1539348074180" duration="4407000" />
+      <workItem from="1539348074180" duration="5003000" />
     </task>
     <task id="LOCAL-00001" summary="fix: fix count wrong.">
       <created>1539348667642</created>
@@ -342,7 +266,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4407000" />
+    <option name="totallyTimeSpent" value="5003000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

@@ -1,5 +1,3 @@
-package team.onebeltoneroad.wordCount;
-
 import team.onebeltoneroad.wordCount.dataprocess.entity.WordCounterInfo;
 import team.onebeltoneroad.wordCount.dataprocess.service.*;
 import team.onebeltoneroad.wordCount.dataprocess.tool.CommandParser;
