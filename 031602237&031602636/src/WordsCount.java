@@ -6,16 +6,6 @@ public class WordsCount {
 
 
     private HashMap<String, Integer> map = new HashMap<>();
-    private int wordscount = 0;
-
-
-    /**
-     * @return the sum of words
-     */
-    public int getwordscount() {
-        return wordscount;
-    }
-
     
     /**
      * @return the HashMap contain words and words's sum
@@ -34,29 +24,9 @@ public class WordsCount {
 
         HashMap<String, Integer> titlesMap = countContent(handleContent.getTitles(), m);
         HashMap<String, Integer> abstractsMap = countContent(handleContent.getAbstracts(), m);
-        wordscount = getWordsSum(handleContent.getHandledContent());
         map = mergeMap(titlesMap, abstractsMap, w);
 
     }
-
-
-    /**
-     * @param content the file content
-     * @return the word's number of the content
-     */
-    private int getWordsSum(String content) {
-        int wordscount = 0;
-        String[] temp = content.split("[\\s+\\p{Punct}]+");
-        String countRegex = "^[a-zA-Z]{4,}.*";
-        for (String i : temp) {
-            if (i.matches(countRegex)) {
-            	wordscount++;
-            }
-        }
-        return wordscount;
-    }
-
-
     /**
      * @param contents the List contents titles or abstracts
      * @param m the number of words
@@ -64,7 +34,6 @@ public class WordsCount {
      */
     private HashMap<String, Integer> countContent(List<String> contents, int m) {
         HashMap<String, Integer> map = new HashMap<>();
-//        String splitRegex = "[\\s+\\p{Punct}]+";
         String splitRegex = "[\\s+\\p{Punct}]+";
         String splitStartRegex = "^[\\s+\\p{Punct}]+";
         String wordRegex = "^[a-zA-Z]{4,}.*";
@@ -72,7 +41,6 @@ public class WordsCount {
 
         for (String content : contents) {
             String[] temp = content.split(splitRegex);
-//            Arrays.asList(temp).forEach(System.out::println);
 
             List<String> splits = new ArrayList<>();
             Matcher matcher = pattern.matcher(content);
@@ -87,14 +55,13 @@ public class WordsCount {
 
                 if (temp[i].matches(wordRegex)) {
                     stringBuilder.append(temp[i]);
-//                    System.out.println(temp[i]);
                 } else {
                     continue;
                 }
-                boolean isContinue = true;
+                boolean flag = true;
                 for (int j = 1; j < m; j++) {
                     if (!temp[i + j].matches(wordRegex)) {
-                        isContinue = false;
+                        flag = false;
                         break;
                     } else {
                         if (isSplitStart) {
@@ -106,7 +73,7 @@ public class WordsCount {
                     }
                 }
 
-                if (isContinue) {
+                if (flag) {
                     String words = stringBuilder.toString().toLowerCase();
                     if (!map.containsKey(words)) {
                         map.put(words, 1);
@@ -149,4 +116,26 @@ public class WordsCount {
         return map;
     }
 
+    /**
+     * @param 
+     * @return 前n多
+     */
+    public static List<Map.Entry<String, Integer>> mostWords(HashMap<String, Integer> map, int n) {
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
+        list.sort(new MapComparator());
+        return list.size() < n ? list.subList(0, list.size()) : list.subList(0, n);
+    }
+
+
+    /**
+     * 比较大小
+     */
+    private static class MapComparator implements Comparator<Map.Entry<String, Integer>> {
+        @Override
+        public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+        	int cmp = o1.getValue() - o2.getValue();
+        	return (cmp==0?o1.getKey().compareTo(o2.getKey()):-cmp);
+        }
+    }
+    
 }

@@ -31,9 +31,8 @@ public class Main {
 			writeInTxt.writeTxt("characters: " + charscount,parser.getO());
 			
 			WordsCount wordsCount = new WordsCount(handleContent, parser.getM(), parser.getW());
-			int words = wordsCount.getwordscount();
-			String wordStr=words+"";
-			writeInTxt.writeTxt("words: " + wordStr,parser.getO());
+			int wordscount = count.charsCount(handleContent.getHandledContent());
+			writeInTxt.writeTxt("words: " + wordscount,parser.getO());
 			writeInTxt.writeTxt("lines: " + linescount,parser.getO());
 			count.wordDetail(parser.getI(), parser, wordsCount);
 		}

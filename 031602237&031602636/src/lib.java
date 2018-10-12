@@ -32,9 +32,16 @@ public class lib implements wordCount{
 	}
 
 	@Override
-	public int wordsCount(String filepath) throws IOException {
-		
-		return 0;
+	public int wordsCount(String content) throws IOException {
+		int wordscount = 0;
+        String[] temp = content.split("[\\s+\\p{Punct}]+");
+        String countRegex = "^[a-zA-Z]{4,}.*";
+        for (String i : temp) {
+            if (i.matches(countRegex)) {
+            	wordscount++;
+            }
+        }
+        return wordscount;
 	}
 
 	@Override
@@ -52,7 +59,7 @@ public class lib implements wordCount{
 	@Override
 	public void wordDetail(String filepath,Parser parser,WordsCount wordsCount) throws IOException {
 		//Êä³öÇ°n
-		List<Map.Entry<String, Integer>> mostList = new WordCmp().mostWords(wordsCount.getMap(), parser.getN());
+		List<Map.Entry<String, Integer>> mostList =WordsCount.mostWords(wordsCount.getMap(), parser.getN());
 		for (Map.Entry<String, Integer> i : mostList) {
 			writeInTxt.writeTxt("<"+i.getKey()+">: " + i.getValue(),parser.getO());
         }
