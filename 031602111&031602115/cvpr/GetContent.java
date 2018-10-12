@@ -38,9 +38,9 @@ public class GetContent {
         } catch (IOException e) {
             e.printStackTrace();
         }
+//        String result = doGetauthors(content);
         FileOutputStream fileOut = new FileOutputStream("./cvpr/result.txt");
-//        FileOutputStream fileOut = new FileOutputStream("./cvpr/author.csv");
-//          getAuthor(content);
+
         getTitle(content);
         getAbstract(urls);
         String result = "";
@@ -56,20 +56,29 @@ public class GetContent {
         fileOut.close();
         System.out.println("Done");
     }
+    //执行获取作者操作
+    public static String doGetauthors(String content) throws FileNotFoundException {
+        FileOutputStream fileOut = new FileOutputStream("./cvpr/author.txt");
+        getTitle(content);
+        String result = getAuthor(content);
+        return result;
+    }
     //获取作者
-    public static void getAuthor(String content){
+    public static String getAuthor(String content){
         String[] conts = content.trim().split("<dt [^>]*?>[\\w\\W]*?<\\/dt>");
         int i = 0 ;
         int authorNum = 0;
-//        String cont = new String();
-        for(i = 1;i < 3 ; i++){
+        String result = new String();
+        for(i = 1;i < conts.length ; i++){
+            result += "(Title" + i + ")" + titles.get(i-1) + ": ";
             Pattern r = Pattern.compile("<form id=[^>]*?>[\\w\\W]*?<\\/form>");
             Matcher m = r.matcher(conts[i]);
             while ( true ){
                 if(m.find()){
                     String author = outHtml(m.group()).trim();
                     author = author.replace(",","");
-                    System.out.println(author);
+                    result += "[" + author  + "}";
+//                    System.out.println(author);
 //                    cont += author + "\r\n";
 //                    if(authors.containsKey(author)){
 //                        int n = (int)authors.get(author);
@@ -79,13 +88,15 @@ public class GetContent {
 //                        authorNum++;
 //                    }
                 } else {
+                    result += "\r\n";
                     break;
                 }
             }
 
         }
-//        return cont;
+        return result;
     }
+
     //获取title和url
     public static void getTitle(String content){
         Pattern r = Pattern.compile("<dt [^>]*?>[\\w\\W]*?<\\/dt>");

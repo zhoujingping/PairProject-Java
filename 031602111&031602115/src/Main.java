@@ -7,15 +7,15 @@ public class Main {
         String fileOutAddress = new String();
         int  countNum = args.length;
         int  outNum = 10;
-        int  arrayNum = 0;
+        int  arrayNum = 3;
         if(countNum > 0){
-            for (int i = 0;i < countNum/2 ; i=i+2){
+            for (int i = 0;i < countNum ; i=i+2){
                 if(args[i].equals("-i")){
                     fileIn  = new File(args[i+1]);
                 }else if(args[i].equals("-w")){
-                    if (type.equals("0")) {
+                    if (args[i+1].equals("0")) {
                         type = "weight0";
-                    }else if (type.equals("1")){
+                    }else if (args[i+1].equals("1")){
                         type = "weight1";
                     }
                 }else if(args[i].equals("-m")){
@@ -31,7 +31,7 @@ public class Main {
 
         }else{
             fileIn  = new File("./cvpr/result.txt");
-            fileOutAddress  =  "./src/result.txt";
+            fileOutAddress  =  "./src/out.txt";
             type = "weight0";
 //            type = "weight1";
             System.out.println("无自定义命令，使用默认参数:" + type);

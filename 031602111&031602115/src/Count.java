@@ -67,6 +67,7 @@ public class Count {
         if(flag){
             linenum++;
         }
+        linenum = linenum - getNum();
         return linenum;
     }
     //单词统计
