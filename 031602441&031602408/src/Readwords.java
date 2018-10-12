@@ -53,7 +53,7 @@ public class Readwords {
 				{
 					s=s.substring(7);
 					lines++;
-					character+=s.length()+1;
+					character+=s.replaceAll("\r\n","\n").length()+1;
 					m = p1.matcher(s);
 					while(m.find())
 					{
@@ -112,7 +112,7 @@ public class Readwords {
 					s=s.substring(10);//abstract÷Æ∫Û
 					//m = p3.matcher(s);
 					lines++;
-					character+=s.length()+1;
+					character+=s.replaceAll("\r\n","\n").length()+1;
 					m = p1.matcher(s);
 					while(m.find())
 					{

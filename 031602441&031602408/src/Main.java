@@ -8,7 +8,7 @@ public class Main {
 	{
 		String pathname=null;
 		pathname="C:\\Users\\Mac\\Desktop\\031602408\\result.txt";
-		String Opathname ="result.txt";
+		String Opathname ="output.txt";
 		int Wflag=0;
 		int Numflag=1;
 		int Comflag =10;
