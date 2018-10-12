@@ -2,16 +2,19 @@ import java.io.*;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class GetContent {
     private static String baseUrl = "http://openaccess.thecvf.com/";
+    private static Map authors = new HashMap();
     private static List<String>   urls = new ArrayList<String>();
     private static List<String>   titles = new ArrayList<String>();
     private static List<String>   abstracts = new ArrayList<String>();
-    private static List<String>   authors = new ArrayList<String>();
+    private static List<String>   authorss = new ArrayList<String>();
 
 
     public static void main(String[] args) throws IOException {
@@ -36,7 +39,8 @@ public class GetContent {
             e.printStackTrace();
         }
         FileOutputStream fileOut = new FileOutputStream("./cvpr/result.txt");
-//        getAuthor(content);
+//        FileOutputStream fileOut = new FileOutputStream("./cvpr/author.csv");
+//          getAuthor(content);
         getTitle(content);
         getAbstract(urls);
         String result = "";
@@ -50,49 +54,37 @@ public class GetContent {
         }
         fileOut.write(result.getBytes());
         fileOut.close();
-//        for (int i = 0 ;i<urls.size();i++){
-//            System.out.println(urls.get(i));
-//        }
-//         for (int i = 0 ;i<abstracts.size();i++){
-//            System.out.println(abstracts.get(i));
-//        }
-
         System.out.println("Done");
     }
     //获取作者
     public static void getAuthor(String content){
-        //获取作者
-        Pattern r = Pattern.compile("<form id=[^>]*?>[\\w\\W]*?<\\/form>");
-        Matcher m = r.matcher(content);
-        while ( true ){
-            if(m.find()){
-                String author = outHtml(m.group()).trim();
-                author = author.replace(",","");
-                System.out.println(author);
-
-//                  String con = outHtml(m.group());
-//                 Pattern r2 = Pattern.compile("<dd>\n" +
-//                         "<form = [^>]*?>[\\w\\W]*?<\\/dd>");
-//                 Matcher m2 = r2.matcher(con);
-//                //输出标题
-//                if(m2.find()){
-//                    System.out.println(m2.group(0));
-//                    String author = match(m2.group(0), "a", "href");
-//                    System.out.println(author);
-
-//                    String url = match(m2.group(0), "a", "href");
-//                    System.out.println(m2.group(0));
-//                    urls.add(url)
-//                    String  title  = outHtml(m2.group(0));
-//                    titles.add(title)
-////                      System.out.println(title);
-//                }else {
-//                    break;
-//                }
-            }else {
-//                break;
+        String[] conts = content.trim().split("<dt [^>]*?>[\\w\\W]*?<\\/dt>");
+        int i = 0 ;
+        int authorNum = 0;
+//        String cont = new String();
+        for(i = 1;i < 3 ; i++){
+            Pattern r = Pattern.compile("<form id=[^>]*?>[\\w\\W]*?<\\/form>");
+            Matcher m = r.matcher(conts[i]);
+            while ( true ){
+                if(m.find()){
+                    String author = outHtml(m.group()).trim();
+                    author = author.replace(",","");
+                    System.out.println(author);
+//                    cont += author + "\r\n";
+//                    if(authors.containsKey(author)){
+//                        int n = (int)authors.get(author);
+//                        System.out.println("重复:" + author + " id 在: "  +  n);
+//                    }else{
+//                        authors.put(author,authorNum);
+//                        authorNum++;
+//                    }
+                } else {
+                    break;
+                }
             }
+
         }
+//        return cont;
     }
     //获取title和url
     public static void getTitle(String content){
@@ -169,11 +161,6 @@ public class GetContent {
                 contents.append((char)byte_char);
             }
             cont = contents.toString();
-//            int length;
-//            byte[] bytes = new byte[1024 * 20];
-//            while ((length = bis.read(bytes, 0, bytes.length)) != -1) {
-//                System.out.println(is);
-//            }
             bis.close();
             is.close();
         } catch (IOException e) {

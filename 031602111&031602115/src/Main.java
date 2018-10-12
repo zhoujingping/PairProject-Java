@@ -16,7 +16,7 @@ public class Main {
                     if (type.equals("0")) {
                         type = "weight0";
                     }else if (type.equals("1")){
-                        type = "weight0";
+                        type = "weight1";
                     }
                 }else if(args[i].equals("-m")){
                     arrayNum  =  Integer.parseInt(args[i+1]);
@@ -41,11 +41,11 @@ public class Main {
         Count count = new Count(fileIn,fileOutAddress);
         switch (type){
             case "weight0":
-                Count.getResult("weight0",arrayNum,outNum);
+                count.getResult("weight0",arrayNum,outNum);
                 break;
 
             case "weight1":
-                Count.getResult("weight1",arrayNum,outNum);
+                count.getResult("weight1",arrayNum,outNum);
                 break;
             default:
                 System.out.println("sorry,match fail");

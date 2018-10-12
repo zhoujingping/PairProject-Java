@@ -1,5 +1,7 @@
 import java.io.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Count {
     private static String content = new String();
@@ -80,10 +82,10 @@ public class Count {
         int i = 0;
         for (;i < contents.length;i++){
             String[] conts = contents[i].split("\r\n");
-            String title = conts[1].trim().substring(6);
+            String title = conts[1].trim().substring(7);
 //            System.out.println(title);
             wordNum =  strCount(wordNum,weightT,title,aNum);
-            String abs   = conts[2].trim().substring(9);
+            String abs   = conts[2].trim().substring(10);
             wordNum = strCount(wordNum,1,abs,aNum);
         }
 //        System.out.println(wordNum);
@@ -96,8 +98,8 @@ public class Count {
         String contentString = str.toLowerCase().replaceAll(regex, "|");
         contns = contentString.split("\\|");
         int i = 0;
-        int[] wordnumS = new int[500];
-        int wordnums = 0;
+        int[] wordnumS  = new int[500];
+        int wnum = 0;
         //单词切割后进行判断单词
         for (; i < contns.length; i++) {
             if (contns[i].length() >= 4) {
@@ -109,8 +111,8 @@ public class Count {
                                 if(aNum == 0){
                                     ma = Maps(ma,contns[i],weight);
                                 }else {
-                                    wordnumS[wordnums] = i;
-                                    wordnums++;
+                                    wordnumS[wnum] = i;
+                                    wnum++;
                                 }
                             }
                         }
@@ -118,16 +120,31 @@ public class Count {
                 }
             }
         }
-
+        Boolean flag = false;
         if(aNum > 0){
-            if(aNum <=  wordnums+1){
-                for(int j = 0;j < wordnums+2-aNum;j++){
+            if(aNum <=  wnum){
+                for(int j = 0;j < wnum + 1 - aNum;j++){
+                    //0到1
+                    flag = false;
                     String s = new String();
-                    for (int k = 0; k<aNum;k++ ){
-                        s += contns[wordnumS[k]];
-                        if(k!=aNum-1) s += " ";
+                    for (int k = j ; k < j + aNum; k++ ){
+                        if(wordnumS[k] ==  wordnumS[j] + k - j){
+//                            s +=  contns[wordnumS[j]];
+                            s +=  contns[wordnumS[k]];
+                            if(k != j + aNum -1) {
+                                s += "[\\w\\W]";
+                            }else {
+                                flag = true;
+                            }
+                        }
                     }
-                    ma = Maps(ma,s,weight);
+                    if (flag) {
+                        Pattern r = Pattern.compile(s);
+                        Matcher m = r.matcher(str.toLowerCase());
+                        if(m.find()) {
+                            ma = Maps(ma , m.group() , weight);
+                        }
+                    }
                 }
             }
         }
