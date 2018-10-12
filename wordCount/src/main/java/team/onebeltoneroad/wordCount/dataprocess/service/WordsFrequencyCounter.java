@@ -42,6 +42,7 @@ public class WordsFrequencyCounter {
         try {
             while ((in = bufferedReader.readLine()) != null) {
                 if (in.contains("Title: ")) {
+                    word.setLength(0);
                     int length = in.length();
                     state = 0;
                     for (int i = 7; i < length; i++) {
@@ -130,6 +131,7 @@ public class WordsFrequencyCounter {
                     }
                 } else {
                     if (in.contains("Abstract: ")) {
+                        word.setLength(0);
                         int length = in.length();
                         state = 0;
                         for (int i = 10; i < length; i++) {
