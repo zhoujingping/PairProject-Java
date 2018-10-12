@@ -11,14 +11,16 @@ import java.net.URLConnection;
 import org.jsoup.nodes.Element;
 import java.io.File;
 import java.io.PrintWriter;
-public class getword {
+import java.nio.charset.StandardCharsets;
 
-    //定义地址
-    private static String url = "http://openaccess.thecvf.com/CVPR2018.py";
+public class getword {
 
     public static void main(String[] args) {
         int number=0;
+        int flag;
         int i=0;
+        //定义地址
+        String url = "http://openaccess.thecvf.com/CVPR2018.py";
         String code=geturlcode(url);
         String code1=null;
         //将源代码转换为Doc
@@ -56,14 +58,12 @@ public class getword {
         Document doc=Jsoup.parse(code);
         Elements ele1=(doc).select("div[id=papertitle]");
         a=ele1.text();
-        a=a.replace("/n","");
         Elements ele2=(doc).select("div[id=abstract]");
         b=ele2.text();
-        b=b.replace("/n","");
         c="Title: "+a+"\r\n"+"Abstract: "+b+"\r\n"+"\r\n"+"\r\n";
         return c;
     }
-
+    //爬取网页源代码
     public static String geturlcode(String url) {
         //定义url
         URL newurl = null;
@@ -84,16 +84,14 @@ public class getword {
             //获取输入
             input = urlcon.getInputStream();
             //读取输入
-            reader = new InputStreamReader(input);
+            reader = new InputStreamReader(input, StandardCharsets.UTF_8);
             //输出
             breader = new BufferedReader(reader);
             String temp = null;
             while ((temp = breader.readLine()) != null) {
-                code.append(temp + "/n");
+                code.append(temp).append("\r\n");
             }
 
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

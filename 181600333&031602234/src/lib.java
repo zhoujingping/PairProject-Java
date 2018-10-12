@@ -53,7 +53,7 @@ public class lib {
     }
 
     /*统计单词数(已完成)*/
-    public static long countWord(String pathname) {
+    public static long countWord(String pathname)   {
         long words = 0;
         try {
             String encoding = "UTF-8";

@@ -10,7 +10,7 @@ public class Main {
         boolean cntByWeight=false;
         int needNum=10;
         int phraseLength=1;
-        String inPathname = "e:\\test1.txt";
+        String inPathname = "e:\\test4.txt";
         String outPathname = "e:\\result.txt";
         for(int i=0;i<args.length;i+=2){
             switch(args[i]){
@@ -70,4 +70,5 @@ public class Main {
         }
         System.out.println("completed");
     }
+
 }
