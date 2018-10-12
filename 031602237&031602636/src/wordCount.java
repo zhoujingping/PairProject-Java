@@ -28,9 +28,9 @@ public interface wordCount {
 	int charsCount(String filepath) throws IOException;
 	
 	/**
-	 * 词频前十的单词
+	 * 词频前n的单词
 	 * @param filepath
 	 * @throws IOException
 	 */
-	void wordDetail(String filepath) throws IOException;
+	void wordDetail(String filepath, Parser parser, WordsCount wordsCount) throws IOException;
 }

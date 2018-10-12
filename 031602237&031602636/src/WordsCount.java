@@ -6,14 +6,14 @@ public class WordsCount {
 
 
     private HashMap<String, Integer> map = new HashMap<>();
-    private int sum = 0;
+    private int wordscount = 0;
 
 
     /**
      * @return the sum of words
      */
-    public int getSum() {
-        return sum;
+    public int getwordscount() {
+        return wordscount;
     }
 
     
@@ -34,7 +34,7 @@ public class WordsCount {
 
         HashMap<String, Integer> titlesMap = countContent(handleContent.getTitles(), m);
         HashMap<String, Integer> abstractsMap = countContent(handleContent.getAbstracts(), m);
-        sum = getWordsSum(handleContent.getHandledContent());
+        wordscount = getWordsSum(handleContent.getHandledContent());
         map = mergeMap(titlesMap, abstractsMap, w);
 
     }
@@ -45,22 +45,15 @@ public class WordsCount {
      * @return the word's number of the content
      */
     private int getWordsSum(String content) {
-        int sum = 0;
+        int wordscount = 0;
         String[] temp = content.split("[\\s+\\p{Punct}]+");
         String countRegex = "^[a-zA-Z]{4,}.*";
         for (String i : temp) {
             if (i.matches(countRegex)) {
-                sum++;
-//                String lowCase = i.toLowerCase();
-//                if (!map.containsKey(lowCase)) {
-//                    map.put(lowCase, 1);
-//                } else {
-//                    int num = map.get(lowCase);
-//                    map.put(lowCase, num + 1);
-//                }
+            	wordscount++;
             }
         }
-        return sum;
+        return wordscount;
     }
 
 

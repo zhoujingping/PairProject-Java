@@ -1,7 +1,5 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 public class Main {
 	public static void main(String[] args) throws IOException {
@@ -29,25 +27,15 @@ public class Main {
 		}else {
 			wordCount count = new lib();
 			int linescount = count.linesCount(parser.getI());
-		//	int wordscount = count.wordsCount(path);
 			int charscount = count.charsCount(handleContent.getHandledContent());
 			writeInTxt.writeTxt("characters: " + charscount,parser.getO());
 			
 			WordsCount wordsCount = new WordsCount(handleContent, parser.getM(), parser.getW());
-			int words = wordsCount.getSum();
+			int words = wordsCount.getwordscount();
 			String wordStr=words+"";
 			writeInTxt.writeTxt("words: " + wordStr,parser.getO());
 			writeInTxt.writeTxt("lines: " + linescount,parser.getO());
-			
-			List<Map.Entry<String, Integer>> mostList = new CalMost().mostWords(wordsCount.getMap(), parser.getN());
-			for (Map.Entry<String, Integer> i : mostList) {
-				writeInTxt.writeTxt("<"+i.getKey()+">: " + i.getValue(),parser.getO());
-            }
-			
-			
-		//	count.wordDetail(parser.getI());
-			System.out.println(linescount);
-			System.out.println(charscount);
+			count.wordDetail(parser.getI(), parser, wordsCount);
 		}
 	}
 }
