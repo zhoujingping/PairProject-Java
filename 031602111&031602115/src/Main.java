@@ -7,7 +7,7 @@ public class Main {
         String fileOutAddress = new String();
         int  countNum = args.length;
         int  outNum = 10;
-        int  arrayNum = 3;
+        int  arrayNum = 0;
         if(countNum > 0){
             for (int i = 0;i < countNum ; i=i+2){
                 if(args[i].equals("-i")){
