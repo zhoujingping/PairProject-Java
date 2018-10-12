@@ -15,7 +15,6 @@ import java.util.*;
  * @since 2018/9/11
  */
 public class PhraseFrequencyCounter {
-
     private static ArrayDeque<WordInfo> wordsDeque = new ArrayDeque<>();
     private static PhraseInfo phraseInfo = new PhraseInfo();
 
@@ -51,6 +50,7 @@ public class PhraseFrequencyCounter {
         try {
             while ((in = bufferedReader.readLine()) != null) {
                 if (in.contains("Title: ")) {
+                    wordsDeque.clear();
                     int length = in.length();
                     state = 0;
                     for (int i = 7; i < length; i++) {
@@ -72,6 +72,7 @@ public class PhraseFrequencyCounter {
                                 if ((temp >= 97) && (temp <= 122)) {
                                     state = 2;
                                 } else {
+                                    wordsDeque.clear();
                                     state = 0;
                                 }
                                 break;
@@ -80,6 +81,7 @@ public class PhraseFrequencyCounter {
                                 if ((temp >= 97) && (temp <= 122)) {
                                     state = 3;
                                 } else {
+                                    wordsDeque.clear();
                                     state = 0;
                                 }
                                 break;
@@ -89,6 +91,7 @@ public class PhraseFrequencyCounter {
                                     endSubscript = i;
                                     state = 4;
                                 } else {
+                                    wordsDeque.clear();
                                     state = 0;
                                 }
                                 break;
@@ -101,8 +104,13 @@ public class PhraseFrequencyCounter {
                                         StringBuilder phrase = new StringBuilder();
                                         int start = phraseInfo.getStartSubscript();
                                         int end = phraseInfo.getEndSubscript();
+                                        char tempc;
                                         for (int j = start; j <= end; j++) {
-                                            phrase.append(in.charAt(j));
+                                            tempc = in.charAt(j);
+                                            if ((tempc >= 65) && (tempc <= 90)) {
+                                                tempc += 32;
+                                            }
+                                            phrase.append(tempc);
                                         }
                                         if (weightFactor == 1) {
                                             if (phraseMap.containsKey(phrase.toString())) {
@@ -129,8 +137,13 @@ public class PhraseFrequencyCounter {
                             StringBuilder phrase = new StringBuilder();
                             int start = phraseInfo.getStartSubscript();
                             int end = phraseInfo.getEndSubscript();
+                            char tempc;
                             for (int j = start; j <= end; j++) {
-                                phrase.append(in.charAt(j));
+                                tempc = in.charAt(j);
+                                if ((tempc >= 65) && (tempc <= 90)) {
+                                    tempc += 32;
+                                }
+                                phrase.append(tempc);
                             }
                             if (weightFactor == 1) {
                                 if (phraseMap.containsKey(phrase.toString())) {
@@ -149,9 +162,10 @@ public class PhraseFrequencyCounter {
                     }
                 } else {
                     if (in.contains("Abstract: ")) {
+                        wordsDeque.clear();
                         int length = in.length();
                         state = 0;
-                        for (int i = 7; i < length; i++) {
+                        for (int i = 10; i < length; i++) {
                             temp = in.charAt(i);
                             //大写字母转为小写字母
                             if ((temp >= 65) && (temp <= 90)) {
@@ -170,6 +184,7 @@ public class PhraseFrequencyCounter {
                                     if ((temp >= 97) && (temp <= 122)) {
                                         state = 2;
                                     } else {
+                                        wordsDeque.clear();
                                         state = 0;
                                     }
                                     break;
@@ -178,6 +193,7 @@ public class PhraseFrequencyCounter {
                                     if ((temp >= 97) && (temp <= 122)) {
                                         state = 3;
                                     } else {
+                                        wordsDeque.clear();
                                         state = 0;
                                     }
                                     break;
@@ -187,6 +203,7 @@ public class PhraseFrequencyCounter {
                                         endSubscript = i;
                                         state = 4;
                                     } else {
+                                        wordsDeque.clear();
                                         state = 0;
                                     }
                                     break;
@@ -199,8 +216,13 @@ public class PhraseFrequencyCounter {
                                             StringBuilder phrase = new StringBuilder();
                                             int start = phraseInfo.getStartSubscript();
                                             int end = phraseInfo.getEndSubscript();
+                                            char tempc;
                                             for (int j = start; j <= end; j++) {
-                                                phrase.append(in.charAt(j));
+                                                tempc = in.charAt(j);
+                                                if ((tempc >= 65) && (tempc <= 90)) {
+                                                    tempc += 32;
+                                                }
+                                                phrase.append(tempc);
                                             }
                                             if (phraseMap.containsKey(phrase.toString())) {
                                                 phraseMap.put(phrase.toString(), phraseMap.get(phrase.toString()) + 1L);
@@ -219,8 +241,13 @@ public class PhraseFrequencyCounter {
                                 StringBuilder phrase = new StringBuilder();
                                 int start = phraseInfo.getStartSubscript();
                                 int end = phraseInfo.getEndSubscript();
+                                char tempc;
                                 for (int j = start; j <= end; j++) {
-                                    phrase.append(in.charAt(j));
+                                    tempc = in.charAt(j);
+                                    if ((tempc >= 65) && (tempc <= 90)) {
+                                        tempc += 32;
+                                    }
+                                    phrase.append(tempc);
                                 }
                                 if (phraseMap.containsKey(phrase.toString())) {
                                     phraseMap.put(phrase.toString(), phraseMap.get(phrase.toString()) + 1L);

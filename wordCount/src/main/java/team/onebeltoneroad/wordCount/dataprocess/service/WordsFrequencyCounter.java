@@ -132,7 +132,7 @@ public class WordsFrequencyCounter {
                     if (in.contains("Abstract: ")) {
                         int length = in.length();
                         state = 0;
-                        for (int i = 7; i < length; i++) {
+                        for (int i = 10; i < length; i++) {
                             temp = in.charAt(i);
                             //大写字母转为小写字母
                             if ((temp >= 65) && (temp <= 90)) {

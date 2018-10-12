@@ -37,11 +37,11 @@ public class FilePrinter {
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
             //输出字符数
-            bufferedWriter.write("characters: " + charNum + "\n");
+            bufferedWriter.write("characters: " + charNum + "\r\n");
             //输出单词数
-            bufferedWriter.write("words: " + wordNum + "\n");
+            bufferedWriter.write("words: " + wordNum + "\r\n");
             //输出行数
-            bufferedWriter.write("lines: " + lineNum + "\n");
+            bufferedWriter.write("lines: " + lineNum + "\r\n");
 
             //输出单词词频前n
             int size = wordList.size();
@@ -49,11 +49,11 @@ public class FilePrinter {
             if (size >= n) {
                 for (int i = 0; i < n; i++) {
                     bufferedWriter.write("<" + wordList.get(i).getKey() + ">: "
-                            + wordList.get(i).getValue() + "\n");
+                            + wordList.get(i).getValue() + "\r\n");
                 }
             } else {
                 for (HashMap.Entry<String, Long> map : wordList) {
-                    bufferedWriter.write("<" + map.getKey() + ">: " + map.getValue() + "\n");
+                    bufferedWriter.write("<" + map.getKey() + ">: " + map.getValue() + "\r\n");
                 }
             }
             bufferedWriter.flush();
