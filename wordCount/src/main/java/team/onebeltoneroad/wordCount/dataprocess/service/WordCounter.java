@@ -87,6 +87,9 @@ public class WordCounter {
                             }
                         }
                     }
+                    if (state == 4) {
+                        wordNum++;
+                    }
                 } else {
                     if (in.contains("Abstract: ")) {
                         int length = in.length();
@@ -136,6 +139,9 @@ public class WordCounter {
                                     break;
                                 }
                             }
+                        }
+                        if (state == 4) {
+                            wordNum++;
                         }
                     }
                 }

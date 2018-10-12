@@ -31,7 +31,7 @@ public class Crawl {
     public static void getContent(String URL) {
         try {
             //定义输出文件地址
-            File resultFile = new File("/Users/wenyiqian/Documents/la/result.txt");
+            File resultFile = new File("result.txt");
             //定义写字符流
             BufferedWriter writer = new BufferedWriter(new FileWriter(resultFile));
             //从URL加载Document
