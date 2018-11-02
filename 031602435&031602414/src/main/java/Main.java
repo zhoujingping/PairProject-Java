@@ -13,7 +13,7 @@ import elementCounter.wordNumberCounter;
 public class Main {
 	public static void main(String[] args) {  
         /* 
-         * ÕâÀïÏÈÈ¡Ä¬ÈÏÖµ£¬ÒòÎª²»ÊÇËùÓĞ²ÎÊı¶¼»á±»ÓÃ»§Ìá¹© 
+         * è¿™é‡Œå…ˆå–é»˜è®¤å€¼ï¼Œå› ä¸ºä¸æ˜¯æ‰€æœ‰å‚æ•°éƒ½ä¼šè¢«ç”¨æˆ·æä¾› 
          */  
         String in = " ";
         String o = " ";
@@ -25,7 +25,7 @@ public class Main {
         long lineNum = 0;
         long wordNum = 0;
         /* 
-         * ÉèÖÃÒ»¸öoffset±äÁ¿£¬ÓÃÀ´¶¨Î»Ïà¹ØĞÅÏ¢ 
+         * è®¾ç½®ä¸€ä¸ªoffsetå˜é‡ï¼Œç”¨æ¥å®šä½ç›¸å…³ä¿¡æ¯ 
          */  
         int optSetting = 0;  
         for (; optSetting < args.length; optSetting++) {  
@@ -53,12 +53,12 @@ public class Main {
             charNum = charCounter.countChar(in);
             wordNum = wordNumberCounter.countWord(in);
             lineNum = lineCounter.countLine(in);
-            //Êä³ö×Ö·ûÊı
-            bufferedWriter.write("characters: " + charNum + "\r\n" + "\r\n");
-            //Êä³öµ¥´ÊÊı
-            bufferedWriter.write("words: " + wordNum + "\r\n" + "\r\n");
-            //Êä³öĞĞÊı
-            bufferedWriter.write("lines: " + lineNum + "\r\n" + "\r\n");
+            //è¾“å‡ºå­—ç¬¦æ•°
+            bufferedWriter.write("characters: " + charNum + "\r\n");
+            //è¾“å‡ºå•è¯æ•°
+            bufferedWriter.write("words: " + wordNum + "\r\n");
+            //è¾“å‡ºè¡Œæ•°
+            bufferedWriter.write("lines: " + lineNum + "\r\n");
             
             if (m == 1) {
             	ArrayList<HashMap.Entry<String, Integer>> wordList = new ArrayList<HashMap.Entry<String, Integer>>();
@@ -70,11 +70,11 @@ public class Main {
                 if (size >= n) {
                     for (int i = 0; i < n; i++) {
                         bufferedWriter.write("<" + wordList.get(i).getKey() + ">: "
-                                + wordList.get(i).getValue() + "\r\n" + "\r\n");
+                                + wordList.get(i).getValue() + "\r\n");
                     }
                 } else {
                     for (HashMap.Entry<String, Integer> map : wordList) {
-                        bufferedWriter.write("<" + map.getKey() + ">: " + map.getValue() + "\r\n" + "\r\n");
+                        bufferedWriter.write("<" + map.getKey() + ">: " + map.getValue() + "\r\n");
                     }
                 }
 
@@ -88,15 +88,15 @@ public class Main {
                 if (size >= n) {
                     for (int i = 0; i < n; i++) {
                         bufferedWriter.write("<" + wordList.get(i).getKey() + ">: "
-                                + wordList.get(i).getValue() + "\r\n" + "\r\n");
+                                + wordList.get(i).getValue() + "\r\n");
                     }
                 } else {
                     for (HashMap.Entry<String, Integer> map : wordList) {
-                        bufferedWriter.write("<" + map.getKey() + ">: " + map.getValue() + "\r\n" + "\r\n");
+                        bufferedWriter.write("<" + map.getKey() + ">: " + map.getValue() + "\r\n");
                     }
                 }
 			}else {
-				System.out.println("µ¥´Ê/´Ê×é³¤¶È²»ÄÜÎª¸º£¡");
+				System.out.println("å•è¯/è¯ç»„é•¿åº¦ä¸èƒ½ä¸ºè´Ÿï¼");
 			}
 
             bufferedWriter.flush();
